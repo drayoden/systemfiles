@@ -7,3 +7,5 @@
 	editor = atom --wait
 [alias]
 	graph = log --oneline --decorate --graph --all
+[commit]
+    template = ~/.gitmessage
