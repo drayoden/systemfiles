@@ -4,7 +4,8 @@
 	name = daryn
 	email = daryn@hex50.com
 [core]
-	editor = atom --wait
+	# editor = atom --wait
+	editor = code --wait
 [alias]
 	graph = log --oneline --decorate --graph --all
 [commit]
