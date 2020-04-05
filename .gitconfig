@@ -8,5 +8,6 @@
 	editor = code --wait
 [alias]
 	graph = log --oneline --decorate --graph --all
+	all = !git status && git add . && git commit && git push origin master
 [commit]
     template = ~/.gitmessage
