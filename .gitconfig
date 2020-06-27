@@ -5,9 +5,12 @@
 	email = daryn@hex50.com
 [core]
 	# editor = atom --wait
-	editor = code --wait
+    editor = code --wait
 [alias]
 	graph = log --oneline --decorate --graph --all
-	all = !git status && git add . && git commit && git push origin master
+	all = "!f() { \
+		git status && git add . && git commit && git push origin $1; \
+	}; f" 
+	
 [commit]
     template = ~/.gitmessage
