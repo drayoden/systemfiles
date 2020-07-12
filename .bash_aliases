@@ -3,6 +3,7 @@ alias ll='ls -alF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 alias sudoapt='sudo apt update && sudo apt list --upgradable'
+alias sudocode='sudo code --user-data-dir /root/vscode'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
