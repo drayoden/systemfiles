@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Cura
+Comment=Cura
+Icon=/home/sysadm/apps/cura/cura-48.png
+Exec=/home/sysadm/apps/cura/Ultimaker_Cura-4.7.1.AppImage
+StartupWMClass=cura
+Terminal=false
+Categories=3dp
