@@ -13,6 +13,6 @@ then
     echo "StarupWMClass already exists..."
 else
     echo "inserting StarupWMClass..."/usr/share/applications/
-    sudo sed '/Terminal=false/a StartupWMClass=brave-browser' /usr/share/applications/brave-browser-nightly.desktop > /usr/share/applications/brave-browser-nightlyNEW.desktop 
-    sudo cp /usr/share/applications/brave-browser-nightlyNEW.desktop /usr/share/applications/brave-browser-nightly.desktop
+    sed '/Terminal=false/a StartupWMClass=brave-browser' /usr/share/applications/brave-browser-nightly.desktop > /usr/share/applications/brave-browser-nightlyNEW.desktop 
+    cp /usr/share/applications/brave-browser-nightlyNEW.desktop /usr/share/applications/brave-browser-nightly.desktop
 fi
