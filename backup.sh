@@ -4,7 +4,6 @@ clear
 
 DATE=$(date '+%Y%m%d.%H%M%S')
 HOST=$(hostnamectl hostname)
-BAKROOT=/home/sysadm
 LOGFILE=_$HOST.$DATE.log
 BAKPATH=/home/$USER/tmp/$HOST.$DATE/
 LZ4FILE=/home/$USER/tmp/$HOST.$DATE.tar.lz4
