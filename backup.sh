@@ -18,6 +18,16 @@ else
     echo extenal backup drive found successfully...
 fi
 
+#check if we have rsync installed...
+echo checking for rsync...
+if ! test -f "/usr/bin/rsync"
+then
+    echo ERROR: please install rsync and try again...
+    exit 1
+else
+    echo rsync found successfully...
+fi
+
 # check for ~/tmp/<hostname> folders
 if ! [ -d $BAKPATH ]; then
     mkdir -p $BAKPATH
@@ -56,7 +66,7 @@ else
     exit 2
 fi
 
-echo -backup precess complete...
+echo -backup process complete...
 
 # MOVE BACKUP TO GCS
 # echo MOVING backup to GCS...
@@ -67,5 +77,3 @@ echo -backup precess complete...
 #echo REMOVING local files
 #rm -rf /home/sysadm/tmp/$HOST
 #rm /home/sysadm/tmp/$HOST-$DATE-LOG.txt
-
-
