@@ -8,10 +8,14 @@
 	email = me@daryn.dev
 
 [core]
-    editor = codium --wait
-
+    editor = code --wait
+    pager = cat
 [alias]
-	graph = log --oneline --decorate --graph --all
+	# graph = log --oneline --decorate --graph --all
+	graph = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %s'
+	gst = status
+	gaa = add .
+	gcmsg = commit
 	
 [commit]
     template = ~/.gitmessage
