@@ -69,7 +69,7 @@ if [ "$color_prompt" = yes ]; then
     # cleaner syntax for the prompt:
     #PS1='\e[34m\e[1m\u@\h \e[33m\W\e[91m$(git_branch) \e[0m\$ '
     
-    # some fun:
+    # some fun:(install noto-fonts-emoji for cat/mouse emojis here)
     # PS1=$'🐭 \e[34m\e[1m\u@\h:\e[33m\w\e[91m$(git_branch)\e[0m 🐭 \n\u21b3 🙀 $ '
     PS1=$'🐭 \e[34m\e[1m\u@\h:\e[33m\w\e[91m$(git_branch)\e[0m 🐭 \n\u2ba9 🙀 $ ' #changed arrow
     # PS1=$'🐭 \e[34m\e[1m\u@\h:\e[33m\w\e[91m$(git_branch)\e[0m 🐭 \n\u21aa 🙀 $ ' #changed arrow
@@ -138,24 +138,40 @@ export LS_COLORS
 python() { python3 "$@"; }
 export -f python
 
+# add ~/.local/bin to path
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$PATH:$HOME/.local/bin"
+fi 
 
-if [ -d "$HOME/google-cloud-sdk" ]
-then 
-    export PATH="$HOME/google-cloud-sdk/bin:$PATH"
-    . "$HOME/.cargo/env"
+# set path for gsutil
+if [ -d "$HOME/gsutil" ]; then 
+    export PATH="$PATH:$HOME/gsutil"
 fi 
 
 # set google app password for sending emails
-export GAPPPW=
+export GAPPPW=pegdvxcwwaasxbvd
 
 # have some fun with the terminal
 if [ -f /usr/bin/neofetch ]; then 
     /usr/bin/neofetch
 fi
 
+curl --max-time 6 wttr.in
+
 # run my script to get my home todo list:
 if [ -f ~/.local/bin/getnext.py ]; then 
     ~/.local/bin/getnext.py
 fi
 
+# # start git-auto-sync for logseq
+# if [ -f ~/.local/bin/git-auto-sync ]; then 
+#     echo found git-auto-sync...
+#     (cd "/home/sysadm/data/logseq/" && git-auto-sync w &)
+# else 
+#     echo cannot find git-auto-sync...
+# fi
 
+# added by nvm (node version manager):
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
