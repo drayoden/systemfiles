@@ -16,3 +16,5 @@ alias killterms='killall -9 bash'
 # used for KDE update number automation in toolbar. Returns number of updates available.
 alias udn='checkupdates | wc -l'
 
+# cli remove all node_modules folders
+alias npkill=npx npkill
