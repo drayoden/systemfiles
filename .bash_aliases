@@ -17,4 +17,4 @@ alias killterms='killall -9 bash'
 alias udn='checkupdates | wc -l'
 
 # cli remove all node_modules folders
-alias npkill=npx npkill
+alias npkill='npx npkill'
