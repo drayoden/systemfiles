@@ -156,7 +156,7 @@ if [ -f /usr/bin/neofetch ]; then
     /usr/bin/neofetch
 fi
 
-curl --max-time 6 wttr.in
+curl --max-time 6 wttr.in/Portland
 
 # run my script to get my home todo list:
 if [ -f ~/.local/bin/getnext.py ]; then 
