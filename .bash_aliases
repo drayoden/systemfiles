@@ -5,7 +5,7 @@ alias ll='ls -alF --group-directories-first --color=auto'
 alias wtr='curl wttr.in'
 
 # archlinux update commands:
-alias update='sudo pacman -Syu; yay -Syua'
+alias update='sudo pacman -Syu; yay -Syua'; paccache -rk1
 
 # ESP32 stuff;
 alias getidf='. $HOME/data/esp/esp-idf/export.sh'
