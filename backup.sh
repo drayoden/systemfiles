@@ -40,7 +40,7 @@ echo -$HOST-$DATE | tee $BAKPATH$LOGFILE
 rsync -az --log-file=$BAKPATH$LOGFILE --exclude={'.git','.github','.vscode','node_modules','lost+found','.Trash*','debug','.venv','build','dist'} /home/sysadm/data $BAKPATH
 
 # backup selected files/folders from /home/sysadm/...
-rsync -az --log-file=$BAKPATH$LOGFILE --include={'Downloads/***','.bashrc','.gitconfig','.gitmessage','.bash_aliases','.local/','.local/bin/***'} --exclude=* /home/sysadm/ $BAKPATH
+rsync -az --log-file=$BAKPATH$LOGFILE --include={'Downloads/***','.bashrc','.gitconfig','.gitmessage','.bash_aliases','.local/','.local/bin/***','.config/***'} --exclude=* /home/sysadm/ $BAKPATH
 
 echo -backup completed sucessfully... | tee -a $BAKPATH$LOGFILE
 
