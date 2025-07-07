@@ -1,3 +1,13 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -143,24 +153,9 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$PATH:$HOME/.local/bin"
 fi 
 
-# set path for gsutil
-if [ -d "$HOME/gsutil" ]; then 
-    export PATH="$PATH:$HOME/gsutil"
-fi 
-
-# set google app password for sending emails
-export GAPPPW=pegdvxcwwaasxbvd
-
 # have some fun with the terminal
-if [ -f /usr/bin/neofetch ]; then 
-    /usr/bin/neofetch
-fi
-
-curl --max-time 6 wttr.in/Portland
-
-# run my script to get my home todo list:
-if [ -f ~/.local/bin/getnext.py ]; then 
-    ~/.local/bin/getnext.py
+if [ -f /usr/bin/fastfetch ]; then 
+    /usr/bin/fastfetch
 fi
 
 # # start git-auto-sync for logseq
